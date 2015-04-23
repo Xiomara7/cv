@@ -25,7 +25,11 @@ class DataManager {
     
     init()
     {
-        sectionImages.append("code2040")
+        sectionImages = ["experience",
+                         "hacks",
+                         "extra",
+                         "conferences"]
+
         sectionTitles.append("Work/Tech Experience")
         
     }

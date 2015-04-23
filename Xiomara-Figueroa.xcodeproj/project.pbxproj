@@ -14,7 +14,6 @@
 		0A4836CC1AE88DDA00ED3BEC /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4836CB1AE88DDA00ED3BEC /* ResumeViewController.swift */; };
 		0A4836CE1AE8A83A00ED3BEC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4836CD1AE8A83A00ED3BEC /* DataManager.swift */; };
 		0A4836D11AE8AC7300ED3BEC /* collectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4836D01AE8AC7300ED3BEC /* collectionCell.swift */; };
-		0A4836D51AE9368500ED3BEC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4836D41AE9368500ED3BEC /* AboutViewController.swift */; };
 		3F4204A299786DE1F9EDF13C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EFF2D61EB30A774A8763 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		0A4836CB1AE88DDA00ED3BEC /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
 		0A4836CD1AE8A83A00ED3BEC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0A4836D01AE8AC7300ED3BEC /* collectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = collectionCell.swift; sourceTree = "<group>"; };
-		0A4836D41AE9368500ED3BEC /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		94AD2A221816654012C8E841 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E4508D6C8084C30FF046EB6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FB37EFF2D61EB30A774A8763 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				0A4836CB1AE88DDA00ED3BEC /* ResumeViewController.swift */,
-				0A4836D41AE9368500ED3BEC /* AboutViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A4836D51AE9368500ED3BEC /* AboutViewController.swift in Sources */,
 				0A4836D11AE8AC7300ED3BEC /* collectionCell.swift in Sources */,
 				0A4836CE1AE8A83A00ED3BEC /* DataManager.swift in Sources */,
 				0A4836CC1AE88DDA00ED3BEC /* ResumeViewController.swift in Sources */,

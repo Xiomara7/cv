@@ -16,6 +16,7 @@ class ResumeViewController : UIViewController, UICollectionViewDelegateFlowLayou
     var pictures: NSArray!
     var screenWidth: CGFloat!
     var screenHeight: CGFloat!
+    var sectionIdexPath: NSIndexPath!
     
     init()
     {
@@ -64,13 +65,13 @@ class ResumeViewController : UIViewController, UICollectionViewDelegateFlowLayou
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         if collectionView == firstCollectionView {
-            return 4
+            return DataManager.shared.sectionImages.count
         }
         
         if collectionView == sectionsView {
             return 1
         } else {
-            return 3
+            return 4
         }
     }
 
@@ -85,17 +86,24 @@ class ResumeViewController : UIViewController, UICollectionViewDelegateFlowLayou
             sectionsView?.dataSource = self
             cellsView?.dataSource = self
             
+            sectionIdexPath = indexPath
+            
             return cell
             
         } else {
             let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! UICollectionViewCell
             
             let imgView = UIImageView(frame:cell.bounds)
+            if collectionView == sectionsView {
+                imgView.image = UIImage(named:DataManager.shared.sectionImages[sectionIdexPath.section] as! String)
+            } else {
+                imgView.image = UIImage(named:"ig_bg")
+            }
             
-            imgView.image = UIImage(named:"includegirls")
             imgView.contentMode = .ScaleToFill
             
             cell.backgroundView = imgView
+            cell.backgroundColor = UIColor.grayColor()
             
             return cell
         }
