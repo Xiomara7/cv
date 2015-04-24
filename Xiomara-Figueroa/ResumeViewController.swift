@@ -46,14 +46,12 @@ class ResumeViewController : UIViewController, UICollectionViewDelegateFlowLayou
         
         firstCollectionView!.registerClass(collectionCell.self, forCellWithReuseIdentifier: "custom")
         firstCollectionView?.pagingEnabled = true
-        firstCollectionView?.backgroundColor = UIColor.yellowColor()
+        firstCollectionView?.backgroundColor = UIColor.whiteColor()
         
         firstCollectionView?.delegate = self
         firstCollectionView?.dataSource = self
         
         self.view.addSubview(firstCollectionView!)
-        
-        println("layout\(layout)")
         
     }
     
@@ -90,20 +88,53 @@ class ResumeViewController : UIViewController, UICollectionViewDelegateFlowLayou
             
             return cell
             
-        } else {
-            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! UICollectionViewCell
+        }
+        if collectionView == sectionsView {
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell1", forIndexPath: indexPath) as! UICollectionViewCell
             
             let imgView = UIImageView(frame:cell.bounds)
-            if collectionView == sectionsView {
-                imgView.image = UIImage(named:DataManager.shared.sectionImages[sectionIdexPath.section] as! String)
-            } else {
-                imgView.image = UIImage(named:"ig_bg")
+                
+            switch sectionIdexPath.section {
+                case 0:
+                    imgView.image = UIImage(named:"experience")
+                case 1:
+                    imgView.image = UIImage(named:"hacks")
+                case 2:
+                    imgView.image = UIImage(named:"extra")
+                default:
+                    imgView.image = UIImage(named:"conferences")
+                
             }
             
             imgView.contentMode = .ScaleToFill
             
             cell.backgroundView = imgView
-            cell.backgroundColor = UIColor.grayColor()
+            
+            return cell
+            
+        } else {
+            
+            let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell2", forIndexPath: indexPath) as! UICollectionViewCell
+            
+            let imgView = UIImageView(frame:cell.bounds)
+            var images = []
+            
+            switch sectionIdexPath.section {
+                case 0:
+                    images = NSArray(array: DataManager.shared.workImages)
+                case 1:
+                    images = NSArray(array: DataManager.shared.hacksImages)
+                case 2:
+                    images = NSArray(array: DataManager.shared.extraImages)
+                default:
+                    images = NSArray(array: DataManager.shared.confImages)
+                
+            }
+
+            imgView.image = UIImage(named:images[indexPath.section] as! String)
+            imgView.contentMode = .ScaleToFill
+            
+            cell.backgroundView = imgView
             
             return cell
         }

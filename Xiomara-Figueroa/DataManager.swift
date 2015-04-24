@@ -21,7 +21,11 @@ class DataManager {
     
     var sectionTitles = AnyArray()
     
-    var sectioninfo : NSDictionary = NSDictionary()
+    var sectionInfo : NSDictionary = NSDictionary()
+    var hacksInfo : NSDictionary = NSDictionary()
+    var workInfo : NSDictionary = NSDictionary()
+    var confInfo : NSDictionary = NSDictionary()
+    var extraInfo : NSDictionary = NSDictionary()
     
     init()
     {
@@ -29,8 +33,21 @@ class DataManager {
                          "hacks",
                          "extra",
                          "conferences"]
-
-        sectionTitles.append("Work/Tech Experience")
+        
+        hacksImages = ["hackMIT", "hackPR", "hack4Div", "tech_summit"]
+        
+        awardsImages = ["hackPR2", "Greylock", "code2040", "hackPR1"]
+        
+        workImages = ["polsense", "uprrp", "thinair", "tutorias"]
+        
+        confImages = ["yc", "ACM", "GHC", "CMU"]
+        
+        extraImages = ["include", "aecc", "workshop", "talk"]
+        
+        hacksInfo = ["hacks":hacksImages]
+        workInfo = ["experience":workImages]
+        confInfo = ["conferences":confImages]
+        extraInfo = ["extra":extraImages]
         
     }
     

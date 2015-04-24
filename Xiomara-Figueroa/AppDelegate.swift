@@ -19,18 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
+        
         if let window = window {
-            //let about = AboutViewController()
             let resume = ResumeViewController()
-            
-            //let tabBarController = UITabBarController()
-            //
-            //about.tabBarItem.title = "about"
-            //projects.tabBarItem.title = "projects"
-            //
-            //tabBarController.viewControllers = [about, projects];
-            //
-            //let navigationController = UINavigationController(rootViewController: tabBarController)
             
             self.window!.rootViewController = resume
             self.window!.makeKeyAndVisible()

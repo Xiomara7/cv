@@ -35,19 +35,15 @@ class collectionCell : UICollectionViewCell {
         let screenWidth  = UIScreen.mainScreen().bounds.width
         let screenHeight = UIScreen.mainScreen().bounds.height
         
-        titleLabel = UILabel(frame: CGRectZero)
-        titleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
+        titleLabel = UILabel(frame: CGRectMake(10.0, 10.0, 64.0, 44.0))
+        //titleLabel.setTranslatesAutoresizingMaskIntoConstraints(false)
         titleLabel.font = UIFont.systemFontOfSize(16.0)
         titleLabel.textAlignment = .Left
         titleLabel.textColor = UIColor.whiteColor()
         titleLabel.text = "Work/Tech"
         
-        contentView.addSubview(titleLabel)
-        
-        bgImage = UIImage(named: "code2040")
-        bgImageView = UIImageView(image: bgImage)
-        
-        contentView.addSubview(bgImageView)
+        self.contentView.addSubview(titleLabel)
+        self.contentView.bringSubviewToFront(titleLabel)
         
         profileButton.setTranslatesAutoresizingMaskIntoConstraints(false)
         
@@ -62,9 +58,9 @@ class collectionCell : UICollectionViewCell {
         sectionsView = UICollectionView(frame: CGRectMake(0.0, 0.0, screenWidth, screenHeight / 2),
             collectionViewLayout: sectionLayout)
         
-        sectionsView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        sectionsView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell1")
         sectionsView?.pagingEnabled = true
-        sectionsView?.backgroundColor = UIColor.blueColor()
+        sectionsView?.backgroundColor = UIColor.whiteColor()
         
         self.contentView.addSubview(sectionsView!)
         self.contentView.bringSubviewToFront(sectionsView!)
@@ -79,15 +75,12 @@ class collectionCell : UICollectionViewCell {
         cellsView = UICollectionView(frame: CGRectMake(0.0, screenHeight / 2, screenWidth, screenHeight / 2),
             collectionViewLayout: cellsLayout)
     
-        cellsView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        cellsView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell2")
         cellsView?.pagingEnabled = true
-        cellsView?.backgroundColor = UIColor.redColor()
+        cellsView?.backgroundColor = UIColor.whiteColor()
     
         self.contentView.addSubview(cellsView!)
         self.contentView.bringSubviewToFront(cellsView!)
-
-        println("layout\(sectionLayout)")
-        println("layout\(cellsLayout)")
     }
     
     override func updateConstraints() {
