@@ -12,42 +12,29 @@ typealias AnyArray = [AnyObject]
 
 class DataManager {
     
-    var sectionImages = AnyArray()
-    var hacksImages = AnyArray()
     var workImages = AnyArray()
-    var awardsImages = AnyArray()
-    var confImages = AnyArray()
+    var projectImages = AnyArray()
     var extraImages = AnyArray()
-    
-    var sectionTitles = AnyArray()
-    
-    var sectionInfo : NSDictionary = NSDictionary()
-    var hacksInfo : NSDictionary = NSDictionary()
-    var workInfo : NSDictionary = NSDictionary()
-    var confInfo : NSDictionary = NSDictionary()
-    var extraInfo : NSDictionary = NSDictionary()
+    var aboutImages = AnyArray()
     
     init()
     {
-        sectionImages = ["experience",
-                         "hacks",
-                         "extra",
-                         "conferences"]
         
-        hacksImages = ["hackMIT", "hackPR", "hack4Div", "tech_summit"]
         
-        awardsImages = ["hackPR2", "Greylock", "code2040", "hackPR1"]
+        workImages = ["work_1",
+                      "work_2",
+                      "work_3"]
         
-        workImages = ["polsense", "uprrp", "thinair", "tutorias"]
+        projectImages = ["project_2",
+                         "project_3"]
         
-        confImages = ["yc", "ACM", "GHC", "CMU"]
-        
-        extraImages = ["include", "aecc", "workshop", "talk"]
-        
-        hacksInfo = ["hacks":hacksImages]
-        workInfo = ["experience":workImages]
-        confInfo = ["conferences":confImages]
-        extraInfo = ["extra":extraImages]
+        extraImages = [ "extra_1",
+                        "extra_2",
+                        "extra_3",
+                        "extra_4",
+                        "extra_5",
+                        "extra_6"]
+    
         
     }
     

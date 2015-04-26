@@ -16,7 +16,8 @@ class collectionCell : UICollectionViewCell {
     
     var cellsView: UICollectionView?
     var sectionsView: UICollectionView?
-
+    var scrollView: UIScrollView?
+    
     let profileButton: UIButton! = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         
     class var defaultHeight: CGFloat {
@@ -64,23 +65,20 @@ class collectionCell : UICollectionViewCell {
         
         self.contentView.addSubview(sectionsView!)
         self.contentView.bringSubviewToFront(sectionsView!)
+    
+        scrollView = UIScrollView(frame: CGRectMake(0.0, screenWidth, screenWidth + 100.0, screenHeight))
+        scrollView?.backgroundColor = UIColor.blueColor()
+        scrollView?.contentSize = CGSizeMake(screenWidth / 2, screenWidth)
+        scrollView?.contentSize.width = screenWidth + 44.0
+        scrollView?.contentInset.right = 20.0
+        scrollView?.scrollEnabled = true
+        scrollView?.pagingEnabled = true
         
-    
-        let cellsLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-    
-        cellsLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0.5)
-        cellsLayout.itemSize = CGSize(width: screenWidth / 2, height: screenHeight / 2)
-        cellsLayout.scrollDirection = .Horizontal
-    
-        cellsView = UICollectionView(frame: CGRectMake(0.0, screenHeight / 2, screenWidth, screenHeight / 2),
-            collectionViewLayout: cellsLayout)
-    
-        cellsView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell2")
-        cellsView?.pagingEnabled = true
-        cellsView?.backgroundColor = UIColor.whiteColor()
-    
-        self.contentView.addSubview(cellsView!)
-        self.contentView.bringSubviewToFront(cellsView!)
+        scrollView?.userInteractionEnabled = true
+        scrollView?.multipleTouchEnabled = true
+        
+        self.contentView.addSubview(scrollView!)
+
     }
     
     override func updateConstraints() {
@@ -93,6 +91,7 @@ class collectionCell : UICollectionViewCell {
         
         super.updateConstraints()
     }
+    
 }
 
 

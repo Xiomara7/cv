@@ -23,12 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let window = window {
             let resume = ResumeViewController()
+            let resumeNavController = UINavigationController(rootViewController: resume)
             
-            self.window!.rootViewController = resume
+            self.window!.rootViewController = resumeNavController
+        
             self.window!.makeKeyAndVisible()
         }
-        
-        
         
         return true
     }
