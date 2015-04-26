@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0EBCF01AEC9D96007B5EF1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0EBCEF1AEC9D96007B5EF1 /* WebViewController.swift */; };
+		0A0EBCF21AED79D8007B5EF1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0EBCF11AED79D8007B5EF1 /* WebKit.framework */; };
 		0A3EE9651AE3CBF600DFCB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EE9641AE3CBF600DFCB83 /* AppDelegate.swift */; };
 		0A3EE9681AE3CBF600DFCB83 /* Xiomara_Figueroa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EE9661AE3CBF600DFCB83 /* Xiomara_Figueroa.xcdatamodeld */; };
 		0A3EE97E1AE3CBF600DFCB83 /* Xiomara_FigueroaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EE97D1AE3CBF600DFCB83 /* Xiomara_FigueroaTests.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A0EBCEF1AEC9D96007B5EF1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		0A0EBCF11AED79D8007B5EF1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		0A3EE95F1AE3CBF600DFCB83 /* Xiomara-Figueroa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xiomara-Figueroa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3EE9631AE3CBF600DFCB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3EE9641AE3CBF600DFCB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0EBCF21AED79D8007B5EF1 /* WebKit.framework in Frameworks */,
 				3F4204A299786DE1F9EDF13C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +145,7 @@
 				0A75A08B1AEC34A400BEF45A /* WorkViewController.swift */,
 				0A75A08D1AEC34AF00BEF45A /* ExtraViewController.swift */,
 				0A75A08F1AEC34C000BEF45A /* ProjectsVieController.swift */,
+				0A0EBCEF1AEC9D96007B5EF1 /* WebViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +177,7 @@
 		5277D4564AE15E287EBEACD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A0EBCF11AED79D8007B5EF1 /* WebKit.framework */,
 				FB37EFF2D61EB30A774A8763 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -322,6 +329,7 @@
 				0A4836CE1AE8A83A00ED3BEC /* DataManager.swift in Sources */,
 				0A75A0931AEC58D800BEF45A /* Extensions.swift in Sources */,
 				0A75A08E1AEC34AF00BEF45A /* ExtraViewController.swift in Sources */,
+				0A0EBCF01AEC9D96007B5EF1 /* WebViewController.swift in Sources */,
 				0A75A08A1AEC349700BEF45A /* AboutViewController.swift in Sources */,
 				0A4836CC1AE88DDA00ED3BEC /* ResumeViewController.swift in Sources */,
 				0A75A0901AEC34C000BEF45A /* ProjectsVieController.swift in Sources */,

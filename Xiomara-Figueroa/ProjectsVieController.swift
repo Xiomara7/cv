@@ -24,7 +24,13 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = false
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"cancel"),
+                                                                style:.Done,
+                                                                target:self,
+                                                                action:Selector("dismissAction:"))
         
         screenWidth = UIScreen.mainScreen().bounds.width
         screenHeight = UIScreen.mainScreen().bounds.height

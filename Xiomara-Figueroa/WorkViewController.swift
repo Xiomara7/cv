@@ -23,7 +23,12 @@ class WorkViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBarHidden = false
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"cancel"),
+                                                                style:.Done,
+                                                                target:self,
+                                                                action:Selector("dismissAction:"))
         
         tableView = UITableView(frame: CGRectZero, style: .Grouped)
         tableView.delegate = self

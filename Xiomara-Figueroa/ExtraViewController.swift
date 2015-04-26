@@ -24,11 +24,17 @@ class ExtraViewController: UIViewController, UICollectionViewDelegateFlowLayout,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = false
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"cancel"),
+                                                                style:.Done,
+                                                                target:self,
+                                                                action:Selector("dismissAction:"))
         
         screenWidth = UIScreen.mainScreen().bounds.width
         screenHeight = UIScreen.mainScreen().bounds.height
-            
+        
         let imgSize = UIImage(named: "extra_1")?.size
         let layout = UICollectionViewFlowLayout()
         
@@ -44,7 +50,7 @@ class ExtraViewController: UIViewController, UICollectionViewDelegateFlowLayout,
         collectionView.dataSource = self
         
         collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView?.pagingEnabled = true
+        collectionView?.pagingEnabled = false
         collectionView?.backgroundColor = UIColor.whiteColor()
         
         self.view.addSubview(collectionView!)

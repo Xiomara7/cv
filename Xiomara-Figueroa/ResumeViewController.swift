@@ -15,15 +15,15 @@ class ResumeViewController: UIViewController {
     var projectsButton: UIButton!
     var extraButton: UIButton!
     
-    var workTitle: UILabel!
-    var projectsTitle: UILabel!
-    var extraTitle: UILabel!
-    var aboutTitle: UILabel!
+    var workTitle: UIImageView!
+    var projectsTitle: UIImageView!
+    var extraTitle: UIImageView!
+    var aboutTitle: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(hex: 0x4DDBC8)
+        self.view.backgroundColor = UIColor.whiteColor()
         self.navigationController?.navigationBarHidden = true
         
         let imageWidth = UIScreen.mainScreen().bounds.width / 2
@@ -66,32 +66,28 @@ class ResumeViewController: UIViewController {
         projectsButton.addTarget(self, action: Selector("projectsAction:"), forControlEvents: .AllTouchEvents)
         extraButton.addTarget(self, action: Selector("extraAction:"), forControlEvents: .AllTouchEvents)
         
-        aboutButton.backgroundColor = UIColor(hex: 0x4DDBC8)
-        workButton.backgroundColor = UIColor(hex: 0x4DDBC8)
-        projectsButton.backgroundColor = UIColor(hex: 0x4DDBC8)
-        extraButton.backgroundColor = UIColor(hex: 0x4DDBC8)
+        aboutButton.backgroundColor = UIColor.whiteColor()
+        workButton.backgroundColor = UIColor.whiteColor()
+        projectsButton.backgroundColor = UIColor.whiteColor()
+        extraButton.backgroundColor = UIColor.whiteColor()
         
         aboutButton.sizeToFit()
         workButton.sizeToFit()
         projectsButton.sizeToFit()
         extraButton.sizeToFit()
         
-        workTitle = UILabel(frame: CGRectZero)
-        extraTitle = UILabel(frame: CGRectZero)
-        projectsTitle = UILabel(frame: CGRectZero)
-        aboutTitle = UILabel(frame: CGRectZero)
+        workTitle = UIImageView(frame: CGRectZero)
+        extraTitle = UIImageView(frame: CGRectZero)
+        projectsTitle = UIImageView(frame: CGRectZero)
+        aboutTitle = UIImageView(frame: CGRectZero)
         
-        workTitle.text = "Work"
-        workTitle.font = UIFont.boldSystemFontOfSize(16.0)
+        workTitle.image = UIImage(named: "WORK")
         
-        projectsTitle.text = "Projects"
-        projectsTitle.font = UIFont.boldSystemFontOfSize(16.0)
+        projectsTitle.image = UIImage(named: "PROJECTS")
         
-        extraTitle.text = "Extracurriculars"
-        extraTitle.font = UIFont.boldSystemFontOfSize(16.0)
+        extraTitle.image = UIImage(named: "OUTREACH")
         
-        aboutTitle.text = "About"
-        aboutTitle.font = UIFont.boldSystemFontOfSize(16.0)
+        aboutTitle.image = UIImage(named: "ABOUT")
         
         self.view.addSubview(aboutButton)
         self.view.addSubview(workButton)
@@ -116,13 +112,13 @@ class ResumeViewController: UIViewController {
         workButton.autoAlignAxis(.Vertical, toSameAxisOfView: topLeft)
         
         workTitle.autoPinEdge(.Top, toEdge: .Bottom, ofView: workButton, withOffset: 20.0)
-        workTitle.autoPinEdgeToSuperviewEdge(.Left, withInset: 54.0)
+        workTitle.autoPinEdgeToSuperviewEdge(.Left, withInset: 44.0)
         
         aboutButton.autoAlignAxis(.Horizontal, toSameAxisOfView: bottomRigth)
         aboutButton.autoAlignAxis(.Vertical, toSameAxisOfView: bottomRigth)
         
         aboutTitle.autoPinEdge(.Bottom, toEdge: .Top, ofView: aboutButton, withOffset: -20.0)
-        aboutTitle.autoPinEdgeToSuperviewEdge(.Right, withInset: 54.0)
+        aboutTitle.autoPinEdgeToSuperviewEdge(.Right, withInset: 44.0)
         
         extraButton.autoAlignAxis(.Horizontal, toSameAxisOfView: bottomLeft)
         extraButton.autoAlignAxis(.Vertical, toSameAxisOfView: bottomLeft)
@@ -134,7 +130,7 @@ class ResumeViewController: UIViewController {
         projectsButton.autoAlignAxis(.Vertical, toSameAxisOfView: topRight)
         
         projectsTitle.autoPinEdge(.Top, toEdge: .Bottom, ofView: projectsButton, withOffset: 20.0)
-        projectsTitle.autoPinEdgeToSuperviewEdge(.Right, withInset: 44.0)
+        projectsTitle.autoPinEdgeToSuperviewEdge(.Right, withInset: 34.0)
         
     }
     
@@ -148,22 +144,26 @@ class ResumeViewController: UIViewController {
     
     func aboutAction(sender: AnyObject?) {
         let about = AboutViewController()
-        self.navigationController?.pushViewController(about, animated: true)
+        let aboutNav = UINavigationController(rootViewController: about)
+        self.presentViewController(aboutNav, animated: true, completion: nil)
     }
 
     func workAction(sender: AnyObject?) {
         let work = WorkViewController()
-        self.navigationController?.pushViewController(work, animated: true)
+        let workNav = UINavigationController(rootViewController: work)
+        self.presentViewController(workNav, animated: true, completion: nil)
     }
     
     func projectsAction(sender: AnyObject?) {
         let projects = ProjectsViewController()
-        self.navigationController?.pushViewController(projects, animated: true)
+        let projectsNav = UINavigationController(rootViewController: projects)
+        self.presentViewController(projectsNav, animated: true, completion: nil)
     }
     
     func extraAction(sender: AnyObject?) {
         let extra = ExtraViewController()
-        self.navigationController?.pushViewController(extra, animated: true)
+        let extraNav = UINavigationController(rootViewController: extra)
+        self.presentViewController(extraNav, animated: true, completion: nil)
     }
 }
 
