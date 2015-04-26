@@ -35,6 +35,9 @@ class AboutViewController: UIViewController {
                                                                 target:self,
                                                                 action:Selector("dismissAction:"))
         
+        let topView = UIImageView(frame: CGRectMake(0.0, 0.0, width, height / 2))
+        let bottomView = UIImageView(frame: CGRectMake(0.0, width, width, height / 2))
+        
         let profileImage = UIImageView(image: UIImage(named:"button_About"))
         profileImage.backgroundColor = UIColor.whiteColor()
         
@@ -67,9 +70,15 @@ class AboutViewController: UIViewController {
         self.view.addSubview(mediumLogo)
         
         self.view.addSubview(aboutMe)
+        
+        self.view.addSubview(topView)
+        self.view.addSubview(bottomView)
+        
         // AutoLayout 
         
-        profileImage.autoPinEdgeToSuperviewEdge(.Top, withInset: 74.0)
+        profileImage.autoAlignAxis(.Horizontal, toSameAxisOfView: topView)
+        profileImage.autoAlignAxis(.Vertical, toSameAxisOfView: topView)
+        
         profileImage.autoAlignAxis(.Horizontal, toSameAxisOfView: imageViewSize)
         profileImage.autoAlignAxis(.Vertical, toSameAxisOfView: imageViewSize)
         
@@ -78,11 +87,13 @@ class AboutViewController: UIViewController {
         
         githubLogo.autoPinEdge(.Top, toEdge: .Bottom, ofView: profileImage, withOffset: 20.0)
         githubLogo.autoPinEdge(.Left, toEdge: .Right, ofView: twitterLogo, withOffset: 20.0)
+        githubLogo.autoAlignAxis(.Vertical, toSameAxisOfView: profileImage)
         
         mediumLogo.autoPinEdge(.Top, toEdge: .Bottom, ofView: profileImage, withOffset: 20.0)
         mediumLogo.autoPinEdge(.Left, toEdge: .Right, ofView: githubLogo, withOffset: 20.0)
         
         aboutMe.autoPinEdge(.Top, toEdge: .Bottom, ofView: twitterLogo, withOffset: 20.0)
+        aboutMe.autoAlignAxis(.Vertical, toSameAxisOfView: bottomView)
         
     }
     

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0A0EBCF01AEC9D96007B5EF1 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0EBCEF1AEC9D96007B5EF1 /* WebViewController.swift */; };
 		0A0EBCF21AED79D8007B5EF1 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0EBCF11AED79D8007B5EF1 /* WebKit.framework */; };
+		0A0EBCF41AED8676007B5EF1 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0EBCF31AED8676007B5EF1 /* customCell.swift */; };
 		0A3EE9651AE3CBF600DFCB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EE9641AE3CBF600DFCB83 /* AppDelegate.swift */; };
 		0A3EE9681AE3CBF600DFCB83 /* Xiomara_Figueroa.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EE9661AE3CBF600DFCB83 /* Xiomara_Figueroa.xcdatamodeld */; };
 		0A3EE97E1AE3CBF600DFCB83 /* Xiomara_FigueroaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3EE97D1AE3CBF600DFCB83 /* Xiomara_FigueroaTests.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		0A0EBCEF1AEC9D96007B5EF1 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		0A0EBCF11AED79D8007B5EF1 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		0A0EBCF31AED8676007B5EF1 /* customCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		0A3EE95F1AE3CBF600DFCB83 /* Xiomara-Figueroa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xiomara-Figueroa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3EE9631AE3CBF600DFCB83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A3EE9641AE3CBF600DFCB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		0A3EE98A1AE3CC6000DFCB83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0A0EBCF31AED8676007B5EF1 /* customCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				0A75A08A1AEC349700BEF45A /* AboutViewController.swift in Sources */,
 				0A4836CC1AE88DDA00ED3BEC /* ResumeViewController.swift in Sources */,
 				0A75A0901AEC34C000BEF45A /* ProjectsVieController.swift in Sources */,
+				0A0EBCF41AED8676007B5EF1 /* customCell.swift in Sources */,
 				0A75A08C1AEC34A400BEF45A /* WorkViewController.swift in Sources */,
 				0A3EE9651AE3CBF600DFCB83 /* AppDelegate.swift in Sources */,
 				0A3EE9681AE3CBF600DFCB83 /* Xiomara_Figueroa.xcdatamodeld in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ExtraViewController.swift
+//  ProjectsViewController.swift
 //  Xiomara-Figueroa
 //
 //  Created by Xiomara on 4/25/15.

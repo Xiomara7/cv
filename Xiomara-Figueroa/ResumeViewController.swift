@@ -1,6 +1,5 @@
 //
-//  ViewController.swift
-//  otro
+//  ResumeViewController.swift
 //
 //  Created by Xiomara on 4/25/15.
 //  Copyright (c) 2015 UPRRP. All rights reserved.
@@ -112,26 +111,26 @@ class ResumeViewController: UIViewController {
         workButton.autoAlignAxis(.Vertical, toSameAxisOfView: topLeft)
         
         workTitle.autoPinEdge(.Top, toEdge: .Bottom, ofView: workButton, withOffset: 20.0)
-        workTitle.autoPinEdgeToSuperviewEdge(.Left, withInset: 44.0)
+        workTitle.autoAlignAxis(.Vertical, toSameAxisOfView: workButton)
+    
         
         aboutButton.autoAlignAxis(.Horizontal, toSameAxisOfView: bottomRigth)
         aboutButton.autoAlignAxis(.Vertical, toSameAxisOfView: bottomRigth)
         
         aboutTitle.autoPinEdge(.Bottom, toEdge: .Top, ofView: aboutButton, withOffset: -20.0)
-        aboutTitle.autoPinEdgeToSuperviewEdge(.Right, withInset: 44.0)
+        aboutTitle.autoAlignAxis(.Vertical, toSameAxisOfView: aboutButton)
         
         extraButton.autoAlignAxis(.Horizontal, toSameAxisOfView: bottomLeft)
         extraButton.autoAlignAxis(.Vertical, toSameAxisOfView: bottomLeft)
         
         extraTitle.autoPinEdge(.Bottom, toEdge: .Top, ofView: extraButton, withOffset: -20.0)
-        extraTitle.autoPinEdgeToSuperviewEdge(.Left, withInset: 24.0)
+        extraTitle.autoAlignAxis(.Vertical, toSameAxisOfView: extraButton)
         
         projectsButton.autoAlignAxis(.Horizontal, toSameAxisOfView: topRight)
         projectsButton.autoAlignAxis(.Vertical, toSameAxisOfView: topRight)
         
         projectsTitle.autoPinEdge(.Top, toEdge: .Bottom, ofView: projectsButton, withOffset: 20.0)
-        projectsTitle.autoPinEdgeToSuperviewEdge(.Right, withInset: 34.0)
-        
+        projectsTitle.autoAlignAxis(.Vertical, toSameAxisOfView: projectsButton)
     }
     
     override func viewWillAppear(animated: Bool) {
