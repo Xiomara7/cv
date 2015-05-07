@@ -14,7 +14,9 @@ class DataManager {
     
     var workImages = AnyArray()
     var projectImages = AnyArray()
+    var projectImagesInfo = AnyArray()
     var extraImages = AnyArray()
+    var extraImagesInfo = AnyArray()
     var aboutImages = AnyArray()
     var workInfo = AnyArray()
     
@@ -26,15 +28,31 @@ class DataManager {
                       "work_2",
                       "work_3"]
         
-        projectImages = ["project_2",
-                         "project_3"]
+        projectImages = ["project_1",
+                         "project_2",
+                         "project_3",
+                         "project_4"]
+        
+        projectImagesInfo = ["project_1_info",
+                            "project_2_info",
+                            "project_3_info",
+                            "project_4_info"]
         
         extraImages = [ "extra_1",
                         "extra_2",
                         "extra_3",
                         "extra_4",
                         "extra_5",
-                        "extra_6"]
+                        "extra_6",
+                        "extra_7"]
+        
+        extraImagesInfo = [ "extra_1_info",
+                            "extra_2_info",
+                            "extra_3_info",
+                            "extra_4_info",
+                            "extra_5_info",
+                            "extra_6_info",
+                            "extra_7_info"]
     
         workInfo = [["role": "iOS Developer",
                         "date": "March 2015 - present",

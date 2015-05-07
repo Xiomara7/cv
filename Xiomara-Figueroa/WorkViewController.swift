@@ -65,7 +65,7 @@ class WorkViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let role = DataManager.shared.workInfo[indexPath.row].valueForKey("role") as! String
         
-        cell.titleLabel.text = "Role: \(role)"
+        cell.titleLabel.text = role
         cell.dateLabel.text = DataManager.shared.workInfo[indexPath.row].valueForKey("date") as? String
         cell.placeLabel.text = DataManager.shared.workInfo[indexPath.row].valueForKey("place") as? String
         cell.descriptionLabel.text = DataManager.shared.workInfo[indexPath.row].valueForKey("description") as? String

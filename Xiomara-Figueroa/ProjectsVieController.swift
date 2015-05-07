@@ -50,7 +50,6 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         collectionView.dataSource = self
         
         collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        collectionView?.pagingEnabled = true
         collectionView?.backgroundColor = UIColor.whiteColor()
         
         self.view.addSubview(collectionView!)
@@ -87,6 +86,32 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         cell.backgroundView = imgView
         
         return cell
+    }
+    
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        
+        let imgView = UIImageView(frame:cell!.bounds)
+        imgView.image = UIImage(named:DataManager.shared.projectImagesInfo[indexPath.section] as! String)
+        imgView.contentMode = .ScaleToFill
+        
+        cell?.backgroundView?.addSubview(imgView)
+        
+        collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition:.CenteredHorizontally)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        
+        let imgView = UIImageView(frame:cell!.bounds)
+        imgView.image = UIImage(named:DataManager.shared.projectImages[indexPath.section] as! String)
+        imgView.contentMode = .ScaleToFill
+        
+        cell!.backgroundView = imgView
+        
     }
     
 }

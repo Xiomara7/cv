@@ -21,6 +21,7 @@
 		0A75A08E1AEC34AF00BEF45A /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75A08D1AEC34AF00BEF45A /* ExtraViewController.swift */; };
 		0A75A0901AEC34C000BEF45A /* ProjectsVieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75A08F1AEC34C000BEF45A /* ProjectsVieController.swift */; };
 		0A75A0931AEC58D800BEF45A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A75A0921AEC58D800BEF45A /* Extensions.swift */; };
+		0ADD74371AFAD8E9008E2242 /* customMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ADD74361AFAD8E9008E2242 /* customMenuView.swift */; };
 		3F4204A299786DE1F9EDF13C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EFF2D61EB30A774A8763 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		0A75A08D1AEC34AF00BEF45A /* ExtraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
 		0A75A08F1AEC34C000BEF45A /* ProjectsVieController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsVieController.swift; sourceTree = "<group>"; };
 		0A75A0921AEC58D800BEF45A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0ADD74361AFAD8E9008E2242 /* customMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customMenuView.swift; sourceTree = "<group>"; };
 		94AD2A221816654012C8E841 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E4508D6C8084C30FF046EB6E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FB37EFF2D61EB30A774A8763 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,7 +157,9 @@
 		0A3EE98A1AE3CC6000DFCB83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0ADD74381AFAE27B008E2242 /* Buttons */,
 				0A0EBCF31AED8676007B5EF1 /* customCell.swift */,
+				0ADD74361AFAD8E9008E2242 /* customMenuView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -175,6 +179,13 @@
 				0A75A0921AEC58D800BEF45A /* Extensions.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		0ADD74381AFAE27B008E2242 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		5277D4564AE15E287EBEACD8 /* Frameworks */ = {
@@ -336,6 +347,7 @@
 				0A75A08A1AEC349700BEF45A /* AboutViewController.swift in Sources */,
 				0A4836CC1AE88DDA00ED3BEC /* ResumeViewController.swift in Sources */,
 				0A75A0901AEC34C000BEF45A /* ProjectsVieController.swift in Sources */,
+				0ADD74371AFAD8E9008E2242 /* customMenuView.swift in Sources */,
 				0A0EBCF41AED8676007B5EF1 /* customCell.swift in Sources */,
 				0A75A08C1AEC34A400BEF45A /* WorkViewController.swift in Sources */,
 				0A3EE9651AE3CBF600DFCB83 /* AppDelegate.swift in Sources */,

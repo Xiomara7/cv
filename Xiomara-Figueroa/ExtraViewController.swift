@@ -83,10 +83,39 @@ class ExtraViewController: UIViewController, UICollectionViewDelegateFlowLayout,
         let imgView = UIImageView(frame:cell.bounds)
         imgView.image = UIImage(named:DataManager.shared.extraImages[indexPath.section] as! String)
         imgView.contentMode = .ScaleToFill
-        
+
         cell.backgroundView = imgView
         
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        
+        let imgView = UIImageView(frame:cell!.bounds)
+        imgView.image = UIImage(named:DataManager.shared.extraImagesInfo[indexPath.section] as! String)
+        imgView.contentMode = .ScaleToFill
+        
+        cell?.backgroundView?.addSubview(imgView)
+        
+        collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition:.CenteredHorizontally)
+    }
+    
+    func collectionView(collectionView: UICollectionView, didUnhighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = collectionView.cellForItemAtIndexPath(indexPath)
+        
+        let imgView = UIImageView(frame:cell!.bounds)
+        imgView.image = UIImage(named:DataManager.shared.extraImages[indexPath.section] as! String)
+        imgView.contentMode = .ScaleToFill
+        
+        cell!.backgroundView = imgView
+
+    }
+    
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        
     }
     
 }

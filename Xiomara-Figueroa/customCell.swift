@@ -10,14 +10,6 @@ import UIKit
 
 class customCell: UITableViewCell {
     
-    struct Config {
-        static let height: CGFloat = 84.0
-    }
-    
-    class var defaultHeight: CGFloat {
-        return Config.height
-    }
-    
     let paddingHorizontal: CGFloat = 15.0
     let paddingVertical: CGFloat = 30.0
     
@@ -61,7 +53,6 @@ class customCell: UITableViewCell {
         descriptionLabel.lineBreakMode = .ByTruncatingTail
         
         descriptionLabel.textAlignment = .Left
-        //descriptionLabel.autoSetDimension(.Height, toSize: 64.0)
         descriptionLabel.preferredMaxLayoutWidth = screenWidth - paddingHorizontal
         descriptionLabel.sizeToFit()
         

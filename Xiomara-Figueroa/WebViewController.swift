@@ -44,11 +44,6 @@ class WebViewController: UIViewController  {
         var url = NSURL(string:myUrl)
         var req = NSURLRequest(URL:url!)
         self.webView!.loadRequest(req)
-    
-      
-        // AutoLayout
-    
-        //webView.autoPinEdgeToSuperviewEdge(.Top, withInset: 64.0)
     }
     
     // Mark: - Selector Methods

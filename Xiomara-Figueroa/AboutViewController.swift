@@ -102,7 +102,7 @@ class AboutViewController: UIViewController {
     }
     
     func twitterAction(sender: AnyObject?) {
-        let page = WebViewController(url: "https://twitter.com/@com_xiomara7")
+        let page = WebViewController(url: "https://twitter.com/@_xiomara7")
         let pageNav = UINavigationController(rootViewController: page)
         self.presentViewController(pageNav, animated: true, completion: nil)
     }
