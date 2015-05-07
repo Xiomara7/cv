@@ -157,7 +157,6 @@
 		0A3EE98A1AE3CC6000DFCB83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0ADD74381AFAE27B008E2242 /* Buttons */,
 				0A0EBCF31AED8676007B5EF1 /* customCell.swift */,
 				0ADD74361AFAD8E9008E2242 /* customMenuView.swift */,
 			);
@@ -179,13 +178,6 @@
 				0A75A0921AEC58D800BEF45A /* Extensions.swift */,
 			);
 			name = Helpers;
-			sourceTree = "<group>";
-		};
-		0ADD74381AFAE27B008E2242 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		5277D4564AE15E287EBEACD8 /* Frameworks */ = {
