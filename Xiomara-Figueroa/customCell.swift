@@ -28,31 +28,16 @@ class customCell: UITableViewCell {
         self.selectionStyle = .None
         self.accessoryType = .None
         
-        dateLabel = UILabel.newAutoLayoutView()
-        dateLabel.font = UIFont.systemFontOfSize(12.0)
-        dateLabel.textColor = UIColor.grayColor()
-        dateLabel.textAlignment = .Right
-        
-        titleLabel = UILabel.newAutoLayoutView()
-        titleLabel.font = UIFont.systemFontOfSize(12.0)
-        titleLabel.textColor = UIColor.grayColor()
-        titleLabel.textAlignment = .Left
-        
+        dateLabel = label(fontSize: 12.0, align: .Right)
+
+        titleLabel = label(fontSize: 12.0, align: .Left)
         titleLabel.autoSetDimension(.Height, toSize: 16.0)
         
-        placeLabel = UILabel.newAutoLayoutView()
-        placeLabel.font = UIFont.systemFontOfSize(14.0)
-        placeLabel.textColor = UIColor.grayColor()
-        placeLabel.textAlignment = .Right
+        placeLabel = label(fontSize: 14.0, align: .Right)
         
-        descriptionLabel = UILabel.newAutoLayoutView()
-        descriptionLabel.font = UIFont.boldSystemFontOfSize(12.0)
-        descriptionLabel.textColor = UIColor.grayColor()
-        
+        descriptionLabel = label(fontSize: 12.0, align: .Left)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .ByTruncatingTail
-        
-        descriptionLabel.textAlignment = .Left
         descriptionLabel.preferredMaxLayoutWidth = screenWidth - paddingHorizontal
         descriptionLabel.sizeToFit()
         
@@ -68,6 +53,19 @@ class customCell: UITableViewCell {
         super.init(coder: aDecoder)
     }
     
+    class label: UILabel {
+        init(fontSize: CGFloat, align: NSTextAlignment) {
+            super.init(frame: CGRectZero)
+            self.font = UIFont.boldSystemFontOfSize(fontSize)
+            self.textColor = UIColor.grayColor()
+            self.textAlignment = align
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+        
+    }
     override func updateConstraints() {
 
         placeLabel.autoPinEdgeToSuperviewEdge(.Top, withInset: 15.0)

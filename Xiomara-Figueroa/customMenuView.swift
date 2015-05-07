@@ -37,24 +37,24 @@ class customMenuView: UIView {
         let imageHeight = UIScreen.mainScreen().bounds.height / 2
         
         topLeft = UIImageView(frame: CGRectMake(0.0,
-            0.0,
-            imageWidth,
-            imageHeight))
+                                                0.0,
+                                                imageWidth,
+                                                imageHeight))
         
         bottomRigth = UIImageView(frame: CGRectMake(imageWidth,
-            imageHeight,
-            imageWidth,
-            imageHeight))
+                                                    imageHeight,
+                                                    imageWidth,
+                                                    imageHeight))
         
         topRight = UIImageView(frame: CGRectMake(imageWidth,
-            0.0,
-            imageWidth,
-            imageHeight))
+                                                 0.0,
+                                                 imageWidth,
+                                                 imageHeight))
         
         bottomLeft = UIImageView(frame: CGRectMake(0.0,
-            imageHeight,
-            imageWidth,
-            imageHeight))
+                                                   imageHeight,
+                                                   imageWidth,
+                                                   imageHeight))
         
         aboutButton = button(imageName:"button_About")
         workButton = button(imageName: "button_Work")
