@@ -20,6 +20,8 @@ class DataManager {
     var aboutImages = AnyArray()
     var workInfo = AnyArray()
     
+    var about = String()
+    
     init()
     {
         
@@ -78,6 +80,8 @@ class DataManager {
                         "date": "2013 - 2014",
                         "place": "University of Puerto Rico",
                         "description": "Helped students to understand concepts of programming (python, c++)"]]
+     
+        about = "I'm an undergraduate studying Computer Science at the University of Puerto Rico, Rio Piedras. I transferred to CS from a different mayor bringing along a firm belief that what's most important is to create things to help people. This notion combined with my desire to know how things work fuel my passion to contribute meaningfully to poeple's lives. As a result, I'm drawn to participating in extracurricular activities which promote CS education and women in tech and started #include<girls>, a student driven non profit to promotes diversity in Puerto Rico"
         
     }
     

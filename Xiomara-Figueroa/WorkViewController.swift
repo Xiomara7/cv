@@ -15,6 +15,7 @@ class WorkViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Work"
         
         self.navigationController?.navigationBar.tintColor = UIColor.blackColor()
         
@@ -80,7 +81,7 @@ class WorkViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 104.0
+        return 144.0
     }
     
 }

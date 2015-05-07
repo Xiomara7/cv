@@ -77,7 +77,7 @@ class customCell: UITableViewCell {
         dateLabel.autoPinEdgeToSuperviewEdge(.Right, withInset: paddingHorizontal)
         dateLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: placeLabel, withOffset: 5.0)
         
-        descriptionLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: titleLabel, withOffset: paddingVertical)
+        descriptionLabel.autoPinEdge(.Top, toEdge: .Bottom, ofView: titleLabel, withOffset: 54.0)
         descriptionLabel.autoPinEdgeToSuperviewEdge(.Left, withInset: paddingHorizontal)
         
         super.updateConstraints()

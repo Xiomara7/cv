@@ -16,6 +16,7 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
     
     init() {
         super.init(nibName: nil, bundle: nil)
+        self.title = "Projects"
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -56,6 +57,18 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
     }
     
+    class addImage: UIImageView {
+        init(frame:CGRect, imageName: String) {
+            super.init(frame:frame)
+            self.image = UIImage(named:imageName)
+            self.contentMode = .ScaleToFill
+        }
+        
+        required init(coder aDecoder: NSCoder) {
+            fatalError("init(coder:) has not been implemented")
+        }
+    }
+    
     // Mark: - Selector Methods
     
     func dismissAction(sender: AnyObject?) {
@@ -79,11 +92,8 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! UICollectionViewCell
         
-        let imgView = UIImageView(frame:cell.bounds)
-        imgView.image = UIImage(named:DataManager.shared.projectImages[indexPath.section] as! String)
-        imgView.contentMode = .ScaleToFill
-        
-        cell.backgroundView = imgView
+        let img = DataManager.shared.projectImages[indexPath.section] as! String
+        cell.backgroundView = addImage(frame: cell.bounds, imageName: img)
         
         return cell
     }
@@ -93,12 +103,10 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         let cell = collectionView.cellForItemAtIndexPath(indexPath)
         
-        let imgView = UIImageView(frame:cell!.bounds)
-        imgView.image = UIImage(named:DataManager.shared.projectImagesInfo[indexPath.section] as! String)
-        imgView.contentMode = .ScaleToFill
+        let img = DataManager.shared.projectImagesInfo[indexPath.section] as! String
+        let imgView = addImage(frame:cell!.bounds, imageName: img)
         
         cell?.backgroundView?.addSubview(imgView)
-        
         collectionView.selectItemAtIndexPath(indexPath, animated: true, scrollPosition:.CenteredHorizontally)
     }
     
@@ -106,11 +114,8 @@ class ProjectsViewController: UIViewController, UICollectionViewDelegateFlowLayo
         
         let cell = collectionView.cellForItemAtIndexPath(indexPath)
         
-        let imgView = UIImageView(frame:cell!.bounds)
-        imgView.image = UIImage(named:DataManager.shared.projectImages[indexPath.section] as! String)
-        imgView.contentMode = .ScaleToFill
-        
-        cell!.backgroundView = imgView
+        let img = DataManager.shared.projectImages[indexPath.section] as! String
+        cell!.backgroundView = addImage(frame:cell!.bounds, imageName:img)
         
     }
     
